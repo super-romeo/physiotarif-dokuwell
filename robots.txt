@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://physiotarif.dokufile.com/sitemap.xml
