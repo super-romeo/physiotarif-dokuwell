@@ -15,6 +15,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="description" content="Für Physiotherapeuten in der Schweiz: Sitzungen nach Tarif 312 und 311 erfassen und Rechnungen an die Versicherer elektronisch übermitteln.">
 <link rel="icon" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="variant.css">
 <script src="smoke.js" defer></script>
 <!-- faq-jsonld:start -->
 <script type="application/ld+json">
@@ -72,38 +76,116 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9XN5FND"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<!-- tasteskill: kind software; palette linen-harbour; type familjen; radius soft; buttons pill; hero centred; nav-mega (flat); surface-pairs; close-word; footer-statement; mark ring; moment: session strip fills in #beispiel -->
 
-<header><div class="wrap">
-  <div class="logo"><a href="index.html" data-ev="click_logo_home">Physio Abrechnung</a></div>
-  <nav class="top"><a href="#was" data-ev="click_nav_was">Was Sie bekommen</a><a href="price.html" data-ev="click_nav_preis">Preis</a><a href="#beispiel" data-ev="click_nav_beispiel">Beispiel</a><a href="#start" data-ev="click_nav_start">Start</a></nav>
+<header class="nav"><div class="wrap nav__bar">
+  <div class="nav__logo"><a href="index.html" data-ev="click_logo_home"><span class="mark" aria-hidden="true"></span>Physio Abrechnung</a></div>
+  <nav class="nav__links" aria-label="Hauptmenü"><a href="#was" data-ev="click_nav_was">Was Sie bekommen</a><a href="price.html" data-ev="click_nav_preis">Preis</a><a href="#beispiel" data-ev="click_nav_beispiel">Beispiel</a><a class="nav__btn" href="#start" data-ev="click_nav_start">Start</a></nav>
 </div></header>
 
-<div class="wrap">
-  <div class="hero">
-    <h1>Ihre Physiotherapie-Sitzungen nach Tarif 312 abrechnen — ohne Rückweisungen</h1>
-    <p class="sub">Für selbständige Physiotherapeutinnen und Physiotherapeuten: Sie erfassen die Sitzungen nach der Verordnung, die Rechnung an den Krankenversicherer nach Tarif 312 oder an Unfall-, Militär- und Invalidenversicherung nach Tarif 311 entsteht daraus, wird vor dem Versand geprüft und elektronisch übermittelt.</p>
-    <a class="cta" href="price.html" data-ev="cta_click">Das brauche ich</a>
-    <p class="cta-note">Dienst in Vorbereitung · Auf dieser Seite wird keine Zahlung angenommen</p>
-  </div>
+<main id="top">
+  <section class="hero hero--centred" aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__c">
+        <p class="pill"><b>Tarif 312 und 311</b><span>Für selbständige Praxen in der Schweiz</span></p>
+        <h1 id="hero-h"><span class="mark" aria-hidden="true"></span>Physiotherapie nach Tarif 312 abrechnen, ohne Rückweisungen</h1>
+        <p class="hero__lead">Sie erfassen die Sitzungen nach der Verordnung. Daraus entsteht die Rechnung an den Krankenversicherer nach Tarif 312 oder an Unfall-, Militär- und Invalidenversicherung nach Tarif 311, geprüft vor dem Versand und elektronisch übermittelt.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="price.html" data-ev="cta_click">Das brauche ich<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h8"/><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+        <p class="hero__note">Dienst in Vorbereitung · Auf dieser Seite wird keine Zahlung angenommen</p>
+      </div>
+      <div class="hero__window" role="img" aria-label="Die Abrechnung zeigt eine Serie nach Tarif 312: die Prüfung meldet eine fehlende Verordnungsnummer, danach ist die Rechnung bereit zum Versand">
+        <div class="app" aria-hidden="true">
+          <div class="app__bar"><span class="app__dots"><i></i><i></i><i></i></span><span><b>Serien</b> · Laura Brunner</span><span class="sp"></span><span>Tarif 312 · Krankenversicherung</span></div>
+          <div class="app__body">
+            <div class="app__list">
+              <div class="q">Patientin suchen</div>
+              <div class="t is-on"><i style="background:#c9d9e4">LB</i><b>Laura Brunner</b><em>heute</em><span>Serie abgeschlossen, Rechnung offen</span></div>
+              <div class="t"><i style="background:#e6d6b8">MK</i><b>Marco Keller</b><em>Mo</em><span>Unfallversicherung, Tarif 311</span></div>
+              <div class="t"><i style="background:#cfe0d2">SR</i><b>Sara Rossi</b><em>Fr</em><span>Rechnung angenommen</span></div>
+            </div>
+            <div class="app__main story">
+              <div class="app__head"><p class="app__title">Serie nach Verordnung · neun Sitzungen</p><span class="tag">Pos. 7301 · Tarif 312</span></div>
+              <div class="check"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10 3 18 17H2z" stroke-linejoin="round"/><path d="M10 8v4M10 14.5v.5" stroke-linecap="round"/></svg><p><b>Verordnungsnummer fehlt.</b> Bitte vor dem Versand ergänzen.</p><span class="fix">Ergänzen</span></div>
+              <div class="sessions" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="acts"><span>Rechnung senden</span><span>Vorschau</span><small>Neun von neun Sitzungen erfasst</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </section>
 
-  <section id="was" data-view="features_view">
-    <h2>Was Sie bekommen</h2>
-    <div class="grid">
-      <div class="card"><b>Sitzungen erfassen</b><span>Sitzungen je Verordnung mit Datum und Tarifposition, direkt nach der Behandlung.</span><br><a class="btn" href="price.html" data-ev="feature_sitzungen">Das brauche ich</a></div>
-      <div class="card"><b>Rechnung nach Tarif</b><span>Rechnung nach Tarif 312 für die OKP oder 311 für UVG, MV und IV.</span><br><a class="btn" href="price.html" data-ev="feature_rechnung">Das brauche ich</a></div>
-      <div class="card"><b>Prüfung vor dem Versand</b><span>Fehlende Angaben und überzählige Sitzungen werden vor dem Versand gemeldet.</span><br><a class="btn" href="price.html" data-ev="feature_pruefung">Das brauche ich</a></div>
-      <div class="card"><b>Elektronischer Versand</b><span>Rechnungen elektronisch an die Versicherer, mit Status je Rechnung.</span><br><a class="btn" href="price.html" data-ev="feature_versand">Das brauche ich</a></div>
+  <section id="was" class="ground-alt" data-view="features_view" aria-labelledby="was-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="was-h">Was Sie bekommen. <span class="muted">Von der Verordnung bis zum Versand, in einem Ablauf.</span></h2>
+      </div>
+      <div class="grid cards">
+        <article class="card">
+          <div class="panel" role="img" aria-label="Eine erfasste Sitzung mit Datum und Tarifposition">
+            <div class="frag" aria-hidden="true"><div class="row"><b>Sitzung sechs</b><span class="muted">heute</span></div><div class="row"><span>Tarifposition</span><span class="tag">7301</span></div></div>
+          </div>
+          <h3>Sitzungen erfassen</h3>
+          <p>Sitzungen je Verordnung mit Datum und Tarifposition, direkt nach der Behandlung.</p>
+          <a class="link" href="price.html" data-ev="feature_sitzungen">Das brauche ich</a>
+        </article>
+        <article class="card">
+          <div class="panel" role="img" aria-label="Eine Rechnung, dem richtigen Tarif zugeordnet">
+            <div class="frag" aria-hidden="true"><div class="row"><span>Krankenversicherung</span><span class="tag">Tarif 312</span></div><div class="row"><span>Unfall, Militär, IV</span><span class="tag">Tarif 311</span></div></div>
+          </div>
+          <h3>Rechnung nach Tarif</h3>
+          <p>Rechnung nach Tarif 312 für die OKP oder 311 für UVG, MV und IV.</p>
+          <a class="link" href="price.html" data-ev="feature_rechnung">Das brauche ich</a>
+        </article>
+        <article class="card">
+          <div class="panel" role="img" aria-label="Die Prüfung meldet eine überzählige Sitzung">
+            <div class="frag" aria-hidden="true"><div class="row"><b>Prüfung</b><span class="tag tag--warn">Hinweis</span></div><div class="row"><span>Sitzung über der Verordnung</span></div></div>
+          </div>
+          <h3>Prüfung vor dem Versand</h3>
+          <p>Fehlende Angaben und überzählige Sitzungen werden vor dem Versand gemeldet.</p>
+          <a class="link" href="price.html" data-ev="feature_pruefung">Das brauche ich</a>
+        </article>
+        <article class="card">
+          <div class="panel" role="img" aria-label="Der Status je Rechnung: versendet und angenommen">
+            <div class="frag" aria-hidden="true"><div class="row"><span>Rechnung Brunner</span><span class="tag tag--ok">Angenommen</span></div><div class="row"><span>Rechnung Keller</span><span class="tag">Versendet</span></div></div>
+          </div>
+          <h3>Elektronischer Versand</h3>
+          <p>Rechnungen elektronisch an die Versicherer, mit Status je Rechnung.</p>
+          <a class="link" href="price.html" data-ev="feature_versand">Das brauche ich</a>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="beispiel" data-view="example_view">
-    <h2>Beispiel (fiktive Daten)</h2>
-    <p class="fine">Selbständige Physiotherapeutin in Bern, 28 Patientinnen und Patienten pro Woche. Nach jeder Behandlung tippt sie die Sitzung ein; am Ende der Serie von neun Sitzungen ist die Rechnung nach Tarif 312 fertig. Die Prüfung meldet eine fehlende Verordnungsnummer, sie ergänzt sie und versendet die Rechnung an die Krankenkasse.</p>
-    <a class="cta" href="price.html" data-ev="click_cta_after_example">Paket wählen</a>
+  <section id="beispiel" data-view="example_view" aria-labelledby="beispiel-h">
+    <div class="wrap grid split">
+      <div class="split__text">
+        <p class="label">Fiktive Daten</p>
+        <h2 id="beispiel-h">Ein Beispiel aus einer Einzelpraxis in Bern</h2>
+        <p>Selbständige Physiotherapeutin in Bern, 28 Patientinnen und Patienten pro Woche. Nach jeder Behandlung tippt sie die Sitzung ein; am Ende der Serie von neun Sitzungen ist die Rechnung nach Tarif 312 fertig. Die Prüfung meldet eine fehlende Verordnungsnummer, sie ergänzt sie und versendet die Rechnung an die Krankenkasse.</p>
+        <a class="btn btn--primary" href="price.html" data-ev="click_cta_after_example">Paket wählen<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h8"/><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <div class="split__visual">
+        <div class="stage" role="img" aria-label="Neun erfasste Sitzungen einer Serie, die Prüfung mit der fehlenden Verordnungsnummer, die Ergänzung und der Versand an die Krankenkasse">
+          <div class="series" aria-hidden="true">
+            <div class="series__head"><h3>Serie Brunner · Tarif 312</h3><span class="tag">Krankenkasse</span></div>
+            <div class="dots"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></div>
+            <div class="steps">
+              <div><svg class="ok" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m4 10.5 4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Neun Sitzungen erfasst, Rechnung erstellt</span><span class="tag tag--ok">Fertig</span></div>
+              <div><svg class="warn" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 3 18 17H2z" stroke-linejoin="round"/><path d="M10 8v4M10 14.5v.5" stroke-linecap="round"/></svg><span>Prüfung: Verordnungsnummer fehlt</span><span class="tag tag--warn">Gemeldet</span></div>
+              <div><svg class="ok" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m4 10.5 4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Nummer in der Praxis ergänzt</span><span class="tag tag--ok">Ergänzt</span></div>
+              <div><svg class="go" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10h12M11 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Elektronisch an die Krankenkasse</span><span class="tag">Versendet</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 <!-- seo-tekst:start -->
-  <section id="opis">
-    <h2>So funktioniert es</h2>
+  <section id="opis" class="ground-alt" style="--h: 2" aria-labelledby="opis-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="opis-h">So funktioniert es</h2></div>
+      <div class="prose">
     <p>Selbständige Physiotherapeutinnen und Physiotherapeuten in der Schweiz rechnen ihre Leistungen meist direkt mit den Versicherern ab. Für die obligatorische Krankenpflegeversicherung gilt der Tarif 312, für Unfall-, Militär- und Invalidenversicherung der Tarif 311. Jede Rechnung muss die Verordnung, die Sitzungen, die Tarifpositionen und die Angaben zur Patientin oder zum Patienten korrekt enthalten.</p>
     <p>In einer Einzelpraxis wird diese Arbeit oft am Abend oder am Wochenende erledigt. Sitzungen werden auf Papier notiert und später übertragen, die Zahl der verordneten Sitzungen wird von Hand nachgezählt, und eine Rechnung mit einem Fehler kommt Wochen später zurück, während die Behandlung längst abgeschlossen ist.</p>
     <p>Die Software beginnt bei der Verordnung. Sie erfassen die Patientin oder den Patienten, die ärztliche Verordnung mit der Zahl der Sitzungen und den Versicherer. Nach jeder Behandlung tragen Sie die Sitzung mit Datum und Tarifposition ein, auf dem Computer in der Praxis oder auf dem Tablet.</p>
@@ -115,9 +197,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Der Einstieg dauert einen Abend: Praxisangaben und ZSR-Nummer, die laufenden Verordnungen und die nächsten Sitzungen. Die bereits abgerechneten Serien bleiben in Ihrem bisherigen Programm, neue Serien laufen ab dem nächsten Tag hier.</p>
     <p>Wenn Sie in einer Gemeinschaftspraxis arbeiten, rechnet jede Therapeutin und jeder Therapeut unter der eigenen Nummer ab, und die Praxis sieht die Übersicht aller. Vertretungen werden in der Verordnung vermerkt, damit die Rechnung stimmt.</p>
     <p>Die Software ist für selbständige Physiotherapeutinnen und Physiotherapeuten und kleine Praxen gedacht. Sie ist in Vorbereitung: Wir prüfen zuerst, ob Praxen sie brauchen. Für die Richtigkeit der Abrechnung bleibt die Therapeutin oder der Therapeut verantwortlich.</p>
+      </div>
+    </div>
   </section>
-  <section id="faq">
-    <h2>Häufige Fragen</h2>
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="wrap grid faq-grid">
+      <div class="section-head"><h2 id="faq-h">Häufige Fragen</h2></div>
+      <div class="faq">
     <h3>Welche Tarife werden unterstützt?</h3>
     <p>Tarif 312 für die obligatorische Krankenpflegeversicherung und Tarif 311 für Unfall-, Militär- und Invalidenversicherung.</p>
     <h3>Werden die Rechnungen elektronisch übermittelt?</h3>
@@ -128,18 +214,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Nein, die Software läuft im Browser auf Computer und Tablet.</p>
     <h3>Kann ich sie schon nutzen?</h3>
     <p>Noch nicht. Die Software ist in Vorbereitung, und wir prüfen, ob Praxen sie brauchen.</p>
+      </div>
+    </div>
   </section>
 <!-- seo-tekst:end -->
-  <section id="start" data-view="start_view">
-    <h2>Legen Sie Ihre Praxis an</h2>
-    <p><label>Behandlungen pro Woche<br><select data-ev-focus="form_start" style="margin-top:6px;padding:8px;font-size:16px"><option value="">— bitte wählen —</option><option>Bis 20</option><option>20–50</option><option>50–100</option><option>Mehr als 100</option></select></label></p>
-    <a class="cta" href="price.html" data-ev="form_submit_click">Starten</a>
+  <section id="start" class="close" data-view="start_view" aria-labelledby="start-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="start-h">Legen Sie Ihre Praxis an</h2>
+        <p>Sagen Sie uns, wie viele Behandlungen Sie pro Woche abrechnen.</p>
+      </div>
+      <div class="close__form">
+        <div class="field"><label for="behandlungen">Behandlungen pro Woche</label><select id="behandlungen" data-ev-focus="form_start"><option value="">— bitte wählen —</option><option>Bis 20</option><option>20–50</option><option>50–100</option><option>Mehr als 100</option></select></div>
+        <a class="btn btn--primary" href="price.html" data-ev="form_submit_click">Starten<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h8"/><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <p class="note">Dienst in Vorbereitung. Auf dieser Seite wird keine Zahlung angenommen.</p>
+    </div>
   </section>
-</div>
+</main>
 
-<footer><div class="wrap">
-  <p><a href="privacy.html" data-ev="click_legal_privacy">Datenschutz</a></p>
-  <p class="muted">Abrechnungssoftware für Ihre Praxis. Für die Richtigkeit der Abrechnung bleibt die Therapeutin oder der Therapeut verantwortlich.</p>
+<footer class="foot"><div class="wrap foot__grid">
+  <p class="foot__mark"><span class="mark" aria-hidden="true"></span>Physio Abrechnung</p>
+  <div class="foot__side">
+    <p>Abrechnungssoftware für Ihre Praxis. Für die Richtigkeit der Abrechnung bleibt die Therapeutin oder der Therapeut verantwortlich.</p>
+    <p><a class="link" href="privacy.html" data-ev="click_legal_privacy">Datenschutz</a></p>
+  </div>
 </div></footer>
 
 </body>
