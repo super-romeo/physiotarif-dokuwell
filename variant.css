@@ -3,21 +3,23 @@
    2) page CSS where the kit says page CSS (a card group's --p-h, inside a visual),
    3) what neutralises the shared smoke base stylesheet (style.css) where it clashes with the kit. */
 
-/* 1. theme (as printed) */
+/* 1. theme (the printed block, its values set to the smokes' house palette, СМ-04, and one font, Inter:
+   brief 4, every variant shares colours and font, only the layout differs; inverse tokens light, lit ground neutral) */
 :root {
-  --p-bg: #f3f1ec; --p-surface: #e6e2d9; --p-ink: #1d2530; --p-muted: #5a6270;
-  --p-accent: #2c5877; --p-accent-ink: #ffffff; --p-action: #2c5877; --p-action-ink: #ffffff;
-  --p-inv-bg: #1d2530; --p-inv-surface: #29313b; --p-inv-ink: #f3f1ec; --p-inv-muted: #9a9d9f;
-  --p-inv-accent: #f3f1ec; --p-inv-accent-ink: #1d2530; --p-inv-action: #f3f1ec; --p-inv-action-ink: #1d2530;
-  --font-display: "Instrument Sans", system-ui, sans-serif;
-  --font-text: "Instrument Sans", system-ui, sans-serif;
-  --font-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --p-bg: #fcfcfc; --p-surface: #f7f8f9; --p-ink: #05080b; --p-muted: #5c646f;
+  --p-accent: #006acf; --p-accent-ink: #ffffff; --p-action: #006acf; --p-action-ink: #ffffff;
+  --p-inv-bg: #f7f8f9; --p-inv-surface: #ffffff; --p-inv-ink: #05080b; --p-inv-muted: #5c646f;
+  --p-inv-accent: #006acf; --p-inv-accent-ink: #ffffff; --p-inv-action: #006acf; --p-inv-action-ink: #ffffff;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-text: "Inter", system-ui, sans-serif;
+  --font-mono: "Inter", system-ui, sans-serif;
   --display-weight: 500;
   --display-tracking: -0.028em;
   --display-tracking-xl: -0.036em;
   --display-stretch: 96%;
   --ly-scale: 1.04;
 }
+:root[data-ground] { --ground-bg: #f7f8f9; --ground-surface: #ffffff; --ground-ink: #05080b; --ground-muted: #5c646f; --ground-accent: #dfe1e5; }
 
 /* 2. page CSS: the hero frame takes what a 1280x800 screen leaves (the kit's floor is 220-340px, which runs
    past the fold there); one --p-h for the four feature panels; the doc page needs no room for its note */
